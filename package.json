@@ -34,7 +34,9 @@
     "ember-try": "0.0.4"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "calendar",
+    "full-calendar"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"
