@@ -22,7 +22,7 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 
 ### Supported Options
 
-* events
+* [events](http://fullcalendar.io/docs/event_data/Event_Object/)([array](http://fullcalendar.io/docs/event_data/events_array/), [JSON](http://fullcalendar.io/docs/event_data/events_json_feed/), or [function](http://fullcalendar.io/docs/event_data/events_function/))
 * [headerLeft](http://fullcalendar.io/docs/display/header/)
 * [headerCenter](http://fullcalendar.io/docs/display/header/)
 * [headerRight](http://fullcalendar.io/docs/display/header/)
