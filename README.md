@@ -1,6 +1,6 @@
 # Ember CLI Full Calendar
 
-This is a *WIP* Ember wrapper for jQuery FullCalendar plugin.
+This is a *WIP* Ember wrapper for [jQuery FullCalendar](http://fullcalendar.io/) plugin.
 
 ## Installation
 
