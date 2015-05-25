@@ -23,18 +23,18 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 ### Supported Options
 
 * events
-* headerLeft
-* headerCenter
-* headerRight
-* theme
-* firstDay
-* isRTL
-* weekends
-* hiddenDays
-* fixedWeekCount
-* weekNumbers
-* height
-* editable
+* [headerLeft](http://fullcalendar.io/docs/display/header/)
+* [headerCenter](http://fullcalendar.io/docs/display/header/)
+* [headerRight](http://fullcalendar.io/docs/display/header/)
+* [theme](http://fullcalendar.io/docs/display/theme/)
+* [firstDay](http://fullcalendar.io/docs/display/firstDay/)
+* [isRTL](http://fullcalendar.io/docs/display/isRTL/)
+* [weekends](http://fullcalendar.io/docs/display/weekends/)
+* [hiddenDays](http://fullcalendar.io/docs/display/hiddenDays/)
+* [fixedWeekCount](http://fullcalendar.io/docs/display/fixedWeekCount/)
+* [weekNumbers](http://fullcalendar.io/docs/display/weekNumbers/)
+* [height](http://fullcalendar.io/docs/display/height/)
+* [editable](http://fullcalendar.io/docs/event_ui/editable/)
 
 ### Contributors
 
