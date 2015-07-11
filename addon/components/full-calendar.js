@@ -59,7 +59,7 @@ export default Ember.Component.extend({
         _this.sendAction('eventDrop', event, delta, revertFunc, jsEvent, ui, view);
       },
 
-      eventResize: function(function(event, delta, revertFunc, jsEvent, ui, view) {
+      eventResize: function(event, delta, revertFunc, jsEvent, ui, view) {
         _this.sendAction('eventResize', event, delta, revertFunc, jsEvent, ui, view);
       },
 
