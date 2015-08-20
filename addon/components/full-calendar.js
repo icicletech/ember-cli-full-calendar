@@ -78,10 +78,6 @@ export default Ember.Component.extend({
       dragRevertDuration: _this.get('dragRevertDuration'),
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
-
-      eventDrop: function(event, delta, revertFunc, jsEvent, ui, view) {
-      	_this.sendAction('eventDrop', event, delta, revertFunc, jsEvent, ui, view);
-      }
     });
   }.on('didInsertElement'),
 });
