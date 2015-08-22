@@ -1,4 +1,5 @@
 # Ember CLI Full Calendar
+[![Build Status](https://travis-ci.org/icicletech/ember-cli-full-calendar.svg)]
 
 This is a *WIP* Ember wrapper for [jQuery FullCalendar](http://fullcalendar.io/) plugin.
 
