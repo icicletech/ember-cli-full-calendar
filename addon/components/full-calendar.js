@@ -31,7 +31,7 @@ export default Ember.Component.extend({
 
   _initializeCalendar: function() {
   	var _this = this;
-    return $(".full-calendar").fullCalendar({
+    return Ember.$(".full-calendar").fullCalendar({
     	// General Display
     	header: {
     		left: _this.get('headerLeft'),
