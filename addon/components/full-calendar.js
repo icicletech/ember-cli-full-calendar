@@ -39,6 +39,8 @@ export default Ember.Component.extend({
     		right: _this.get('headerRight'),
     	},
 
+      theme: _this.get('theme'),
+
     	// Event Data
     	events: _this.get('events'),
 
@@ -79,5 +81,5 @@ export default Ember.Component.extend({
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
     });
-  }.on('didInsertElement'),
+  }.on('didInsertElement').observes('events'),
 });
