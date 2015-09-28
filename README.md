@@ -36,7 +36,7 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 * [weekNumbers](http://fullcalendar.io/docs/display/weekNumbers/)
 * [height](http://fullcalendar.io/docs/display/height/)
 * [editable](http://fullcalendar.io/docs/event_ui/editable/)
-* [selectable](http://fullcalendar.io/docs/selection/selectable/
+* [selectable](http://fullcalendar.io/docs/selection/selectable/)
 
 ### Contributors
 
