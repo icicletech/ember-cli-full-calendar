@@ -29,6 +29,10 @@ export default Ember.Component.extend({
   dragScroll            : true,
   dragOverlap           : true,
 
+  // Selecting
+  selectable            : false,
+
+
   _initializeCalendar: function() {
   	var _this = this;
     return Ember.$(".full-calendar").fullCalendar({
@@ -73,6 +77,10 @@ export default Ember.Component.extend({
         _this.sendAction('eventResizeStop', event, jsEvent, ui, view);
       },
 
+      select: function(start, end, jsEvent, view) {
+        _this.sendAction('select', start, end, jsEvent, view);
+      },
+
       // Dragging & Resizing
     	editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
@@ -80,6 +88,9 @@ export default Ember.Component.extend({
       dragRevertDuration: _this.get('dragRevertDuration'),
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
+
+      // Selecting
+      selectable: _this.get('selectable')
     });
   }.on('didInsertElement').observes('events'),
 });
