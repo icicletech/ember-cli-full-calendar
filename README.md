@@ -43,6 +43,7 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 * [Shrivara K S](https://github.com/shrivaraks)
 * [Ryan Waudby](https://github.com/ryanwaudby)
 * [jamesdixon](https://github.com/jamesdixon)
+* [Prasanna Vijayan](https://github.com/prasannatm)
 
 ### License
 
