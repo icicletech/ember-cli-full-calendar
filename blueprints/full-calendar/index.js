@@ -4,7 +4,7 @@ module.exports = {
   afterInstall: function() {
     var _this = this;
     return this.addBowerPackageToProject('fullcalendar').then(function() {
-      return this.addAddonToProject('ember-cli-moment-shim', '0.6.2');
+      return _this.addAddonToProject('ember-cli-moment-shim', '0.6.2');
     });
   }
 };
