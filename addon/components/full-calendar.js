@@ -33,7 +33,7 @@ export default Ember.Component.extend({
   selectable            : false,
 
   updateEvents: function() {
-    fullCalendarComponent = Ember.$(".full-calendar");
+    var fullCalendarComponent = Ember.$(".full-calendar");
     fullCalendarComponent.fullCalendar('removeEvents');
     fullCalendarComponent.fullCalendar('addEventSource', this.get('events'));
     fullCalendarComponent.fullCalendar('rerenderEvents' );
