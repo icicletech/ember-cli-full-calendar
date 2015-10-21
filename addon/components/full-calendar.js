@@ -96,7 +96,10 @@ export default Ember.Component.extend({
       dragScroll: _this.get('dragScroll'),
 
       // Selecting
-      selectable: _this.get('selectable')
+      selectable: _this.get('selectable'),
+
+      // First Day
+      firstDay: _this.get('firstDay')
     });
   }.on('didInsertElement').observes('events'),
 });
