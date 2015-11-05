@@ -4,8 +4,8 @@ export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['full-calendar'],
 
-	// Event Data
-  events					      : null,
+  // Event Data
+  events			    : null,
 
   // General Display
   headerLeft            : 'title',
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
   height                : 'auto',
 
   // Event Dragging & Resizing
-  editable				      : false,
+  editable				: false,
   eventStartEditable    : false,
   eventDurationEditable : false,
   dragRevertDuration    : 500,
@@ -42,20 +42,28 @@ export default Ember.Component.extend({
   _initializeCalendar: function() {
   	var _this = this;
     return Ember.$(".full-calendar").fullCalendar({
-    	// General Display
-    	header: {
-    		left: _this.get('headerLeft'),
-    		center: _this.get('headerCenter'),
-    		right: _this.get('headerRight'),
-    	},
 
+      // Event Data
+      events: _this.get('events'),
+
+      // General Display
+      header: {
+          left: _this.get('headerLeft'),
+          center: _this.get('headerCenter'),
+          right: _this.get('headerRight')
+      },
       theme: _this.get('theme'),
+      firstDay: _this.get('firstDay'),
+      isRTL: _this.get('isRTL'),
+      weekends: _this.get('weekends'),
+      hiddenDays: _this.get('hiddenDays'),
+      fixedWeekCount: _this.get('fixedWeekCount'),
+      weekNumbers: _this.get('weekNumbers'),
+      height: _this.get('height'),
 
-    	// Event Data
-    	events: _this.get('events'),
-
-    	// Clicking & Hovering
+      // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
+        console.log('event click') //todo remove
       	_this.sendAction('eventClick', calEvent, jsEvent, view);
       },
 
@@ -88,7 +96,7 @@ export default Ember.Component.extend({
       },
 
       // Dragging & Resizing
-    	editable: _this.get('editable'),
+      editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
       eventDurationEditable: _this.get('eventDurationEditable'),
       dragRevertDuration: _this.get('dragRevertDuration'),
@@ -96,10 +104,7 @@ export default Ember.Component.extend({
       dragScroll: _this.get('dragScroll'),
 
       // Selecting
-      selectable: _this.get('selectable'),
-
-      // First Day
-      firstDay: _this.get('firstDay')
+      selectable: _this.get('selectable')
     });
-  }.on('didInsertElement').observes('events'),
+  }.on('didInsertElement').observes('events')
 });
