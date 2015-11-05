@@ -94,6 +94,23 @@ export default Ember.Component.extend({
         _this.sendAction('select', start, end, jsEvent, view);
       },
 
+      //Event Rendering
+      eventRender: function(event, element, view) {
+        _this.sendAction('eventRender', event, element, view);
+      },
+
+      eventAfterRender: function( event, element, view ) {
+        _this.sendAction('eventAfterRender', event, element, view);
+      },
+
+      eventAfterAllRender: function (view) {
+        _this.sendAction('eventAfterAllRender', view);
+      },
+
+      eventDestroy: function (event, element, view) {
+        _this.sendAction('eventDestroy', event, element, view);
+      },
+
       // Dragging & Resizing
       editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
@@ -101,7 +118,6 @@ export default Ember.Component.extend({
       dragRevertDuration: _this.get('dragRevertDuration'),
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
-      dragOverlap: _this.get('dragOverlap'),
 
       // Selecting
       selectable: _this.get('selectable')
