@@ -63,7 +63,6 @@ export default Ember.Component.extend({
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
-        console.log('event click') //todo remove
       	_this.sendAction('eventClick', calEvent, jsEvent, view);
       },
 
@@ -102,6 +101,7 @@ export default Ember.Component.extend({
       dragRevertDuration: _this.get('dragRevertDuration'),
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
+      dragOverlap: _this.get('dragOverlap'),
 
       // Selecting
       selectable: _this.get('selectable')
