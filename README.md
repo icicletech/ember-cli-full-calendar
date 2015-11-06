@@ -39,6 +39,63 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 * [height](http://fullcalendar.io/docs/display/height/)
 * [editable](http://fullcalendar.io/docs/event_ui/editable/)
 * [selectable](http://fullcalendar.io/docs/selection/selectable/)
+* [dragRevertDuration](http://fullcalendar.io/docs/event_ui/dragRevertDuration/)
+* [dragOpacity](http://fullcalendar.io/docs/event_ui/dragOpacity/)
+* [dragScroll](http://fullcalendar.io/docs/event_ui/dragScroll/)
+* [eventStartEditable](http://fullcalendar.io/docs/event_ui/eventStartEditable/)
+* [eventDurationEditable](http://fullcalendar.io/docs/event_ui/eventDurationEditable/)
+
+### Setting Up Callbacks
+All supported callbacks can be captured using Ember actions.
+
+Add the component to your template file.
+
+	// app/templates/application.hbs
+	{{full-calendar events=events eventClick=(action "clicked") }}
+	
+Create the events.
+
+	// app/routes/application.js
+	import Ember from 'ember';
+
+	export default Ember.Route.extend({
+		model: function() {
+			return {
+				events: Ember.A([{
+					title: "Hackathon", start: Date.now()
+				}])
+    		};
+		}
+	});
+
+	
+Register for the action in your controller.
+
+	// app/controllers/application.js
+	import Ember from 'ember';
+
+	export default Ember.Controller.extend({
+		actions: {
+			clicked(event, jsEvent, view){
+				console.log(`${event.title} was clicked!`)
+				// Prints: Hackathon was clicked!
+			}
+		}
+	});
+
+### Supported Callbacks
+
+* [eventClick](http://fullcalendar.io/docs/mouse/eventClick/)
+* [eventDragStart](http://fullcalendar.io/docs/event_ui/eventDragStart/)
+* [eventDragStop](http://fullcalendar.io/docs/event_ui/eventDragStop/)
+* [eventDrop](http://fullcalendar.io/docs/event_ui/eventDrop/)
+* [eventResize](http://fullcalendar.io/docs/event_ui/eventResize/)
+* [eventResizeStart](http://fullcalendar.io/docs/event_ui/eventResizeStart/)
+* [eventResizeStop](http://fullcalendar.io/docs/event_ui/eventResizeStop/)
+* [eventRender](http://fullcalendar.io/docs/event_rendering/eventRender/)
+* [eventAfterRender](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
+* [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
+* [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
 
 ### Contributors
 
@@ -46,6 +103,7 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 * [Ryan Waudby](https://github.com/ryanwaudby)
 * [jamesdixon](https://github.com/jamesdixon)
 * [Prasanna Vijayan](https://github.com/prasannatm)
+* [Andres Monroy](https://github.com/hyvemynd)
 
 ### License
 
