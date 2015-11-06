@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   classNames: ['full-calendar'],
 
   // Event Data
-  events			    : null,
+  events			          : null,
 
   // General Display
   headerLeft            : 'title',
@@ -21,7 +21,7 @@ export default Ember.Component.extend({
   height                : 'auto',
 
   // Event Dragging & Resizing
-  editable				: false,
+  editable				      : false,
   eventStartEditable    : false,
   eventDurationEditable : false,
   dragRevertDuration    : 500,
@@ -77,8 +77,6 @@ export default Ember.Component.extend({
       eventDrop: function(event, delta, revertFunc, jsEvent, ui, view) {
         _this.sendAction('eventDrop', event, delta, revertFunc, jsEvent, ui, view);
       },
-
-      eventRender: eventRenderFunction,
 
       eventResize: function(event, delta, revertFunc, jsEvent, ui, view) {
         _this.sendAction('eventResize', event, delta, revertFunc, jsEvent, ui, view);
