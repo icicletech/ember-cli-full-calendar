@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Component.extend({
   tagName: 'div',
@@ -19,6 +20,7 @@ export default Ember.Component.extend({
   fixedWeekCount        : true,
   weekNumbers           : false,
   height                : 'auto',
+	defaultDate           : moment(),
 
   // Event Dragging & Resizing
   editable				      : false,
@@ -60,6 +62,7 @@ export default Ember.Component.extend({
       fixedWeekCount: _this.get('fixedWeekCount'),
       weekNumbers: _this.get('weekNumbers'),
       height: _this.get('height'),
+      defaultDate: _this.get('defaultDate'),
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
