@@ -7,7 +7,11 @@ export default Ember.Component.extend({
   // Event Data
   events			          : null,
 
+  // Resource Data
+  resources             : null,
+
   // General Display
+  defaultView           : 'month',
   headerLeft            : 'title',
   headerCenter          : '',
   headerRight           : 'today prev,next',
@@ -39,6 +43,13 @@ export default Ember.Component.extend({
     fullCalendarComponent.fullCalendar('rerenderEvents' );
   }.observes('events'),
 
+  updateResources: function() {
+    var resources = this.get('resources');
+    resources.forEach(function(resource) {
+      Ember.$(".full-calendar").fullCalendar('addResource', resource);
+    });
+  }.observes('resources'),
+
   _initializeCalendar: function() {
   	var _this = this;
     return Ember.$(".full-calendar").fullCalendar({
@@ -46,7 +57,11 @@ export default Ember.Component.extend({
       // Event Data
       events: _this.get('events'),
 
+      // Resource Data
+      resources: _this.get('resources'),
+
       // General Display
+      defaultView: _this.get('defaultView'),
       header: {
           left: _this.get('headerLeft'),
           center: _this.get('headerCenter'),
@@ -122,5 +137,5 @@ export default Ember.Component.extend({
       // Selecting
       selectable: _this.get('selectable')
     });
-  }.on('didInsertElement').observes('events')
+  }.on('didInsertElement').observes('events','resources')
 });
