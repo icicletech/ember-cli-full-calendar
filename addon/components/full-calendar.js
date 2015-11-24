@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   resources             : null,
 
   // General Display
+  defaultView           : 'month',
   headerLeft            : 'title',
   headerCenter          : '',
   headerRight           : 'today prev,next',
@@ -60,6 +61,7 @@ export default Ember.Component.extend({
       resources: _this.get('resources'),
 
       // General Display
+      defaultView: _this.get('defaultView'),
       header: {
           left: _this.get('headerLeft'),
           center: _this.get('headerCenter'),
