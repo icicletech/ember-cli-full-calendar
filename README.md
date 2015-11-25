@@ -83,7 +83,7 @@ export default Ember.Route.extend({
 			events: Ember.A([{
 				title: "Hackathon", start: Date.now()
 			}])
-  	};
+		};
 	}
 });
 ```
