@@ -89,7 +89,7 @@ export default Ember.Component.extend({
       },
 
       eventDragStop: function(event, jsEvent, ui, view) {
-        _this.sendAction('eventDragStart', event, jsEvent, ui, view);
+        _this.sendAction('eventDragStop', event, jsEvent, ui, view);
       },
 
       eventDrop: function(event, delta, revertFunc, jsEvent, ui, view) {
