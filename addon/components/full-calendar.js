@@ -58,9 +58,9 @@ export default Ember.Component.extend({
 
       // General Display
       header: {
-          left: _this.get('headerLeft'),
-          center: _this.get('headerCenter'),
-          right: _this.get('headerRight')
+        left: _this.get('headerLeft'),
+        center: _this.get('headerCenter'),
+        right: _this.get('headerRight')
       },
       theme: _this.get('theme'),
       firstDay: _this.get('firstDay'),
@@ -81,7 +81,7 @@ export default Ember.Component.extend({
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
-      	_this.sendAction('eventClick', calEvent, jsEvent, view);
+        _this.sendAction('eventClick', calEvent, jsEvent, view);
       },
 
       eventDragStart: function(event, jsEvent, ui, view) {
