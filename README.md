@@ -66,14 +66,14 @@ All supported callbacks can be captured using Ember actions.
 
 Add the component to your template file.
 
-```
+```javascript
 // app/templates/application.hbs
 {{full-calendar events=model.events eventClick=(action "clicked") }}
 ```
 
 Create the events.
 
-```
+```javascript
 // app/routes/application.js
 import Ember from 'ember';
 
@@ -90,7 +90,7 @@ export default Ember.Route.extend({
 
 Register for the action in your controller.
 
-```
+```javascript
 // app/controllers/application.js
 import Ember from 'ember';
 
@@ -103,14 +103,6 @@ export default Ember.Controller.extend({
 	}
 });
 ```
-
-### Contributors
-
-* [Shrivara K S](https://github.com/shrivaraks)
-* [Ryan Waudby](https://github.com/ryanwaudby)
-* [jamesdixon](https://github.com/jamesdixon)
-* [Prasanna Vijayan](https://github.com/prasannatm)
-* [Andres Monroy](https://github.com/hyvemynd)
 
 ### License
 
