@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-full-calendar",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "An Ember wrapper for jQuery FullCalendar.",
   "directories": {
     "doc": "doc",
