@@ -19,7 +19,7 @@ export default Ember.Component.extend({
   fixedWeekCount        : true,
   weekNumbers           : false,
   height                : 'auto',
-  businessHours         : { start: '09:00', end: '17:00', dow: [0,1,2,3,4,5,6]},
+  businessHours         : false,
 
   // Views
   defaultView           : 'month',
