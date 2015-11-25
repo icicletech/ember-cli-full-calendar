@@ -66,39 +66,43 @@ All supported callbacks can be captured using Ember actions.
 
 Add the component to your template file.
 
-	// app/templates/application.hbs
-	{{full-calendar events=model.events eventClick=(action "clicked") }}
+```
+// app/templates/application.hbs
+{{full-calendar events=model.events eventClick=(action "clicked") }}
+```
 
 Create the events.
 
-	// app/routes/application.js
-	import Ember from 'ember';
+```
+// app/routes/application.js
+import Ember from 'ember';
 
-	export default Ember.Route.extend({
-		model: function() {
-			return {
-				events: Ember.A([{
-					title: "Hackathon", start: Date.now()
-				}])
-    	};
-		}
-	});
-
+export default Ember.Route.extend({
+	model: function() {
+		return {
+			events: Ember.A([{
+				title: "Hackathon", start: Date.now()
+			}])
+  	};
+	}
+});
+```
 
 Register for the action in your controller.
 
-	// app/controllers/application.js
-	import Ember from 'ember';
+```
+// app/controllers/application.js
+import Ember from 'ember';
 
-	export default Ember.Controller.extend({
-		actions: {
-			clicked(event, jsEvent, view){
-				console.log(`${event.title} was clicked!`)
-				// Prints: Hackathon was clicked!
-			}
+export default Ember.Controller.extend({
+	actions: {
+		clicked(event, jsEvent, view){
+			console.log(`${event.title} was clicked!`)
+			// Prints: Hackathon was clicked!
 		}
-	});
-
+	}
+});
+```
 
 ### Contributors
 
