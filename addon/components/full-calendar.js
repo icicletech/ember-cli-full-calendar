@@ -8,9 +8,7 @@ export default Ember.Component.extend({
   events                : null,
 
   // General Display
-  headerLeft            : 'title',
-  headerCenter          : '',
-  headerRight           : 'today prev,next',
+  headerLeft            : { left: 'title', center: '', right:  'today prev,next' },
   theme                 : false,
   firstDay              : 0,
   isRTL                 : false,
@@ -24,7 +22,7 @@ export default Ember.Component.extend({
   // Views
   defaultView           : 'month',
 
-  //Agenda Options
+  // Agenda Options
   minTime               : '00:00:00',
   maxTime               : '24:00:00',
   scrollTime            : '06:00:00',
@@ -57,11 +55,7 @@ export default Ember.Component.extend({
       events: _this.get('events'),
 
       // General Display
-      header: {
-        left: _this.get('headerLeft'),
-        center: _this.get('headerCenter'),
-        right: _this.get('headerRight')
-      },
+      header: _this.get('header'),
       theme: _this.get('theme'),
       firstDay: _this.get('firstDay'),
       isRTL: _this.get('isRTL'),
@@ -73,7 +67,7 @@ export default Ember.Component.extend({
       defaultView: _this.get('defaultView'),
       businessHours: _this.get('businessHours'),
 
-      //Agenda Option
+      // Agenda Option
       minTime: _this.get('minTime'),
       maxTime: _this.get('maxTime'),
       scrollTime: _this.get('scrollTime'),
@@ -112,7 +106,7 @@ export default Ember.Component.extend({
         _this.sendAction('select', start, end, jsEvent, view);
       },
 
-      //Event Rendering
+      // Event Rendering
       eventRender: function(event, element, view) {
         _this.sendAction('eventRender', event, element, view);
       },

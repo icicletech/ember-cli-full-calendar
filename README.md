@@ -26,9 +26,7 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 ### Supported Options
 
 * [events](http://fullcalendar.io/docs/event_data/Event_Object/)([array](http://fullcalendar.io/docs/event_data/events_array/), [JSON](http://fullcalendar.io/docs/event_data/events_json_feed/), or [function](http://fullcalendar.io/docs/event_data/events_function/))
-* [headerLeft](http://fullcalendar.io/docs/display/header/)
-* [headerCenter](http://fullcalendar.io/docs/display/header/)
-* [headerRight](http://fullcalendar.io/docs/display/header/)
+* [header](http://fullcalendar.io/docs/display/header/)
 * [theme](http://fullcalendar.io/docs/display/theme/)
 * [firstDay](http://fullcalendar.io/docs/display/firstDay/)
 * [isRTL](http://fullcalendar.io/docs/display/isRTL/)
@@ -60,7 +58,7 @@ Add the component to your template file.
 
 	// app/templates/application.hbs
 	{{full-calendar events=events eventClick=(action "clicked") }}
-	
+
 Create the events.
 
 	// app/routes/application.js
@@ -76,7 +74,7 @@ Create the events.
 		}
 	});
 
-	
+
 Register for the action in your controller.
 
 	// app/controllers/application.js
