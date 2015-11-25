@@ -140,5 +140,5 @@ export default Ember.Component.extend({
       // Selecting
       selectable: _this.get('selectable')
     });
-  }.on('didInsertElement').observes('events')
+  }.on('didInsertElement')
 });
