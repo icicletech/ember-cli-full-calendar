@@ -44,6 +44,14 @@ The supported events formats are [array](http://fullcalendar.io/docs/event_data/
 * [dragScroll](http://fullcalendar.io/docs/event_ui/dragScroll/)
 * [eventStartEditable](http://fullcalendar.io/docs/event_ui/eventStartEditable/)
 * [eventDurationEditable](http://fullcalendar.io/docs/event_ui/eventDurationEditable/)
+* [defaultView](http://fullcalendar.io/docs/views/defaultView/)
+* [minTime](http://fullcalendar.io/docs/agenda/minTime/)
+* [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
+* [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
+* [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
+* [businessHours](http://fullcalendar.io/docs/display/businessHours/)
+
+
 
 ### Setting Up Callbacks
 All supported callbacks can be captured using Ember actions.

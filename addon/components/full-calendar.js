@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   classNames: ['full-calendar'],
 
   // Event Data
-  events			          : null,
+  events                : null,
 
   // General Display
   headerLeft            : 'title',
@@ -19,9 +19,19 @@ export default Ember.Component.extend({
   fixedWeekCount        : true,
   weekNumbers           : false,
   height                : 'auto',
+  businessHours         : false,
+
+  // Views
+  defaultView           : 'month',
+
+  //Agenda Options
+  minTime               : '00:00:00',
+  maxTime               : '24:00:00',
+  scrollTime            : '06:00:00',
+  slotEventOverlap      : true,
 
   // Event Dragging & Resizing
-  editable				      : false,
+  editable              : false,
   eventStartEditable    : false,
   eventDurationEditable : false,
   dragRevertDuration    : 500,
@@ -40,7 +50,7 @@ export default Ember.Component.extend({
   }.observes('events'),
 
   _initializeCalendar: function() {
-  	var _this = this;
+    var _this = this;
     return Ember.$(".full-calendar").fullCalendar({
 
       // Event Data
@@ -60,6 +70,14 @@ export default Ember.Component.extend({
       fixedWeekCount: _this.get('fixedWeekCount'),
       weekNumbers: _this.get('weekNumbers'),
       height: _this.get('height'),
+      defaultView: _this.get('defaultView'),
+      businessHours: _this.get('businessHours'),
+
+      //Agenda Option
+      minTime: _this.get('minTime'),
+      maxTime: _this.get('maxTime'),
+      scrollTime: _this.get('scrollTime'),
+      slotEventOverlap: _this.get('slotEventOverlap'),
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
@@ -71,7 +89,7 @@ export default Ember.Component.extend({
       },
 
       eventDragStop: function(event, jsEvent, ui, view) {
-        _this.sendAction('eventDragStart', event, jsEvent, ui, view);
+        _this.sendAction('eventDragStop', event, jsEvent, ui, view);
       },
 
       eventDrop: function(event, delta, revertFunc, jsEvent, ui, view) {
