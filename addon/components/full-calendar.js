@@ -67,6 +67,9 @@ export default Ember.Component.extend({
       defaultView: _this.get('defaultView'),
       businessHours: _this.get('businessHours'),
 
+      // Aditional options
+      titleFormat: _this.get('titleFormat'),
+
       // Agenda Option
       minTime: _this.get('minTime'),
       maxTime: _this.get('maxTime'),
