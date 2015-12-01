@@ -60,6 +60,7 @@ Use the `full-calendar` component -
 * [eventAfterRender](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
 * [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
 * [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
+* [select](http://fullcalendar.io/docs/selection/select_callback/)
 
 ### Setting Up Callbacks
 All supported callbacks can be captured using Ember actions.
