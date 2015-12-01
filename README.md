@@ -46,6 +46,7 @@ Use the `full-calendar` component -
 * [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
+* [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
 
 ### Supported Callbacks
 
