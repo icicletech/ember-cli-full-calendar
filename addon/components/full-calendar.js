@@ -68,6 +68,9 @@ export default Ember.Component.extend({
       businessHours: _this.get('businessHours'),
       titleFormat: _this.get('titleFormat'),
 
+      // Timezone
+      timezone: _this.get('timezone'),
+
       // Agenda Option
       minTime: _this.get('minTime'),
       maxTime: _this.get('maxTime'),

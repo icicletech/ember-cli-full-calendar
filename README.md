@@ -47,6 +47,7 @@ Use the `full-calendar` component -
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
+* [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
 
 ### Supported Callbacks
 
@@ -61,6 +62,7 @@ Use the `full-calendar` component -
 * [eventAfterRender](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
 * [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
 * [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
+* [select](http://fullcalendar.io/docs/selection/select_callback/)
 
 ### Setting Up Callbacks
 All supported callbacks can be captured using Ember actions.
@@ -84,7 +86,7 @@ export default Ember.Route.extend({
 			events: Ember.A([{
 				title: "Hackathon", start: Date.now()
 			}])
-  	};
+		};
 	}
 });
 ```
