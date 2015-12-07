@@ -77,6 +77,10 @@ export default Ember.Component.extend({
       slotEventOverlap: _this.get('slotEventOverlap'),
 
       // Clicking & Hovering
+      dayClick: function(date, jsEvent, view) {
+        _this.sendAction('dayClick', date, jsEvent, view);
+      },
+      
       eventClick: function(calEvent, jsEvent, view) {
         _this.sendAction('eventClick', calEvent, jsEvent, view);
       },
