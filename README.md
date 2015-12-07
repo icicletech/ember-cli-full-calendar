@@ -48,6 +48,8 @@ Use the `full-calendar` component -
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
 * [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
+* [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
+* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
 
 ### Supported Callbacks
 
