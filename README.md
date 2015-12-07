@@ -47,6 +47,8 @@ Use the `full-calendar` component -
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
+* [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
+* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
 
 ### Supported Callbacks
 

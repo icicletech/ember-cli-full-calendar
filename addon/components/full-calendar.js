@@ -53,6 +53,7 @@ export default Ember.Component.extend({
 
       // Event Data
       events: _this.get('events'),
+      timeFormat: _this.get('timeFormat'),
 
       // General Display
       header: _this.get('header'),
@@ -75,6 +76,7 @@ export default Ember.Component.extend({
       maxTime: _this.get('maxTime'),
       scrollTime: _this.get('scrollTime'),
       slotEventOverlap: _this.get('slotEventOverlap'),
+      slotLabelFormat: _this.get('slotLabelFormat'),
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
