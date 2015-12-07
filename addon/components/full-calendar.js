@@ -66,6 +66,7 @@ export default Ember.Component.extend({
       height: _this.get('height'),
       defaultView: _this.get('defaultView'),
       businessHours: _this.get('businessHours'),
+      titleFormat: _this.get('titleFormat'),
 
       // Timezone
       timezone: _this.get('timezone'),
