@@ -66,6 +66,7 @@ Use the `full-calendar` component -
 * [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
 * [select](http://fullcalendar.io/docs/selection/select_callback/)
 * [dayClick](http://fullcalendar.io/docs/mouse/dayClick/)
+* [viewRender](http://fullcalendar.io/docs/display/viewRender/)
 
 ### Setting Up Callbacks
 All supported callbacks can be captured using Ember actions.
