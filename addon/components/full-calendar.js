@@ -69,6 +69,10 @@ export default Ember.Component.extend({
       businessHours: _this.get('businessHours'),
       titleFormat: _this.get('titleFormat'),
 
+      viewRender: function(view, element) {
+        _this.sendAction('viewRender', view, element);
+      },
+
       // Timezone
       timezone: _this.get('timezone'),
 
@@ -83,7 +87,7 @@ export default Ember.Component.extend({
       dayClick: function(date, jsEvent, view) {
         _this.sendAction('dayClick', date, jsEvent, view);
       },
-      
+
       eventClick: function(calEvent, jsEvent, view) {
         _this.sendAction('eventClick', calEvent, jsEvent, view);
       },
