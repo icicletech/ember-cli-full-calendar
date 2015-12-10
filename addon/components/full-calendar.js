@@ -53,6 +53,7 @@ export default Ember.Component.extend({
 
       // Event Data
       events: _this.get('events'),
+      eventSources: _this.get('eventSources'),
       timeFormat: _this.get('timeFormat'),
 
       // General Display

@@ -24,6 +24,7 @@ Use the `full-calendar` component -
 ### Supported Options
 
 * [events](http://fullcalendar.io/docs/event_data/Event_Object/)([array](http://fullcalendar.io/docs/event_data/events_array/), [JSON](http://fullcalendar.io/docs/event_data/events_json_feed/), or [function](http://fullcalendar.io/docs/event_data/events_function/))
+* [eventSources](http://fullcalendar.io/docs/event_data/eventSources/)
 * [header](http://fullcalendar.io/docs/display/header/)
 * [theme](http://fullcalendar.io/docs/display/theme/)
 * [firstDay](http://fullcalendar.io/docs/display/firstDay/)
