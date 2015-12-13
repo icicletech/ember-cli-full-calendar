@@ -19,6 +19,9 @@ export default Ember.Component.extend({
   height                : 'auto',
   businessHours         : false,
 
+  // Text/Time Customization
+  lang                  : 'en',
+
   // Views
   defaultView           : 'month',
 
@@ -83,6 +86,9 @@ export default Ember.Component.extend({
       scrollTime: _this.get('scrollTime'),
       slotEventOverlap: _this.get('slotEventOverlap'),
       slotLabelFormat: _this.get('slotLabelFormat'),
+
+      // Text/Time Customization
+      lang: _this.get('lang'),
 
       // Clicking & Hovering
       dayClick: function(date, jsEvent, view) {
