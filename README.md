@@ -48,7 +48,7 @@ Use the `full-calendar` component -
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
-* [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
+* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
 * [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
@@ -75,7 +75,7 @@ All supported callbacks can be captured using Ember actions.
 
 Add the component to your template file.
 
-```javascript
+```hbs
 // app/templates/application.hbs
 {{full-calendar events=model.events eventClick=(action "clicked") }}
 ```
