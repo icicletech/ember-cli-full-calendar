@@ -48,7 +48,8 @@ Use the `full-calendar` component -
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
-* [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
+* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
+* [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
 * [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
 
@@ -74,7 +75,7 @@ All supported callbacks can be captured using Ember actions.
 
 Add the component to your template file.
 
-```javascript
+```hbs
 // app/templates/application.hbs
 {{full-calendar events=model.events eventClick=(action "clicked") }}
 ```
@@ -110,6 +111,28 @@ export default Ember.Controller.extend({
 		}
 	}
 });
+```
+
+### I18n
+
+Include the language file.
+
+```javascript
+// ember-cli-build.js
+module.exports = function(defaults) {
+  var app = ...
+
+  // Include fullcalendar language file
+  // Full list of available languages: https://github.com/fullcalendar/fullcalendar/tree/master/dist/lang
+  app.import('bower_components/fullcalendar/dist/lang/es.js');
+};
+```
+
+Set fullcalendar language
+
+```hbs
+// app/templates/application.hbs
+{{full-calendar events=model.events lang="es"}}
 ```
 
 ### License
