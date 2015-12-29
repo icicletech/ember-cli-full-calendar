@@ -31,6 +31,9 @@ export default Ember.Component.extend({
   scrollTime            : '06:00:00',
   slotEventOverlap      : true,
 
+  // Current Date
+  defaultDate           : null,
+
   // Event Dragging & Resizing
   editable              : false,
   eventStartEditable    : false,
@@ -86,6 +89,9 @@ export default Ember.Component.extend({
       scrollTime: _this.get('scrollTime'),
       slotEventOverlap: _this.get('slotEventOverlap'),
       slotLabelFormat: _this.get('slotLabelFormat'),
+
+      // Current Date
+      defaultDate: _this.get('defaultDate'),
 
       // Text/Time Customization
       lang: _this.get('lang'),

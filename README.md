@@ -52,6 +52,7 @@ Use the `full-calendar` component -
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
 * [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
+* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
 
 ### Supported Callbacks
 
