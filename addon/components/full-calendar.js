@@ -57,6 +57,7 @@ export default Ember.Component.extend({
 
       // General Display
       header: _this.get('header'),
+      customButtons: _this.get('customButtons'),
       theme: _this.get('theme'),
       firstDay: _this.get('firstDay'),
       isRTL: _this.get('isRTL'),
