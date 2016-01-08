@@ -18,6 +18,7 @@ export default Ember.Component.extend({
   weekNumbers           : false,
   height                : 'auto',
   businessHours         : false,
+  nowIndicator          : false,
 
   // Views
   defaultView           : 'month',
@@ -69,6 +70,7 @@ export default Ember.Component.extend({
       defaultView: _this.get('defaultView'),
       businessHours: _this.get('businessHours'),
       titleFormat: _this.get('titleFormat'),
+      nowIndicator: _this.get('nowIndicator'),
 
       // Timezone
       timezone: _this.get('timezone'),
