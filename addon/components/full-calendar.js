@@ -20,6 +20,8 @@ export default Ember.Component.extend({
   businessHours         : false,
   nowIndicator          : false,
   allDaySlot            : true,
+  eventLimit            : false,
+  eventLimitClick       : 'popover',
 
   // Views
   defaultView           : 'month',
@@ -73,6 +75,8 @@ export default Ember.Component.extend({
       titleFormat: _this.get('titleFormat'),
       nowIndicator: _this.get('nowIndicator'),
       allDaySlot: _this.get('allDaySlot'),
+      eventLimit: _this.get('eventLimit'),
+      eventLimitClick: _this.get('eventLimitClick'),
 
       // Timezone
       timezone: _this.get('timezone'),
