@@ -109,6 +109,14 @@ export default Ember.Component.extend({
         _this.sendAction('select', start, end, jsEvent, view);
       },
 
+      eventMouseover: function (event, jsEvent, view) {
+        _this.sendAction('eventMouseover', event, jsEvent, view);
+      },
+
+      eventMouseout: function (event, jsEvent, view) {
+        _this.sendAction('eventMouseout', event, jsEvent, view);
+      },
+
       // Event Rendering
       eventRender: function(event, element, view) {
         _this.sendAction('eventRender', event, element, view);

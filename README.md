@@ -61,6 +61,8 @@ Use the `full-calendar` component -
 * [eventAfterRender](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
 * [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
 * [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
+* [eventMouseover](http://fullcalendar.io/docs/mouse/eventMouseover/)
+* [eventMouseout](http://fullcalendar.io/docs/mouse/eventMouseout/)
 * [select](http://fullcalendar.io/docs/selection/select_callback/)
 
 ### Setting Up Callbacks
