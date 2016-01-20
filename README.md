@@ -24,7 +24,9 @@ Use the `full-calendar` component -
 ### Supported Options
 
 * [events](http://fullcalendar.io/docs/event_data/Event_Object/)([array](http://fullcalendar.io/docs/event_data/events_array/), [JSON](http://fullcalendar.io/docs/event_data/events_json_feed/), or [function](http://fullcalendar.io/docs/event_data/events_function/))
+* [eventSources](http://fullcalendar.io/docs/event_data/eventSources/)
 * [header](http://fullcalendar.io/docs/display/header/)
+* [customButtons](http://fullcalendar.io/docs/display/customButtons/)
 * [theme](http://fullcalendar.io/docs/display/theme/)
 * [firstDay](http://fullcalendar.io/docs/display/firstDay/)
 * [isRTL](http://fullcalendar.io/docs/display/isRTL/)
@@ -46,7 +48,12 @@ Use the `full-calendar` component -
 * [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
 * [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
-* [timezone](http://http://fullcalendar.io/docs/timezone/timezone/)
+* [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
+* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
+* [lang](http://fullcalendar.io/docs/text/lang/)
+* [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
+* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
+* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
 
 ### Supported Callbacks
 
@@ -62,13 +69,15 @@ Use the `full-calendar` component -
 * [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
 * [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
 * [select](http://fullcalendar.io/docs/selection/select_callback/)
+* [dayClick](http://fullcalendar.io/docs/mouse/dayClick/)
+* [viewRender](http://fullcalendar.io/docs/display/viewRender/)
 
 ### Setting Up Callbacks
 All supported callbacks can be captured using Ember actions.
 
 Add the component to your template file.
 
-```javascript
+```hbs
 // app/templates/application.hbs
 {{full-calendar events=model.events eventClick=(action "clicked") }}
 ```
@@ -104,6 +113,28 @@ export default Ember.Controller.extend({
 		}
 	}
 });
+```
+
+### I18n
+
+Include the language file.
+
+```javascript
+// ember-cli-build.js
+module.exports = function(defaults) {
+  var app = ...
+
+  // Include fullcalendar language file
+  // Full list of available languages: https://github.com/fullcalendar/fullcalendar/tree/master/dist/lang
+  app.import('bower_components/fullcalendar/dist/lang/es.js');
+};
+```
+
+Set fullcalendar language
+
+```hbs
+// app/templates/application.hbs
+{{full-calendar events=model.events lang="es"}}
 ```
 
 ### License
