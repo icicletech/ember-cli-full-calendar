@@ -135,12 +135,12 @@ export default Component.extend({
         this.sendAction('select', start, end, jsEvent, view);
       },
 
-      eventMouseover: function (event, jsEvent, view) {
-        _this.sendAction('eventMouseover', event, jsEvent, view);
+      eventMouseover: (event, jsEvent, view) => {
+        this.sendAction('eventMouseover', event, jsEvent, view);
       },
 
-      eventMouseout: function (event, jsEvent, view) {
-        _this.sendAction('eventMouseout', event, jsEvent, view);
+      eventMouseout: (event, jsEvent, view) => {
+        this.sendAction('eventMouseout', event, jsEvent, view);
       },
 
       // Event Rendering
