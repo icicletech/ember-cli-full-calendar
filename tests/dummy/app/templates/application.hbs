@@ -1,5 +1,24 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
 {{outlet}}
-{{full-calendar events=events}}
+{{full-calendar
+  events=events
+  defaultView="agendaWeek"
+  allDayText="Whole day"
+  minTime="08:00"
+  maxTime="20:00"
+  scrollTime="00:30"
+  slotDuration="00:15"
+  slotEventOverlap=false
+  slotLabelFormat="HH:mm"
+  slotLabelInterval="00:15"
+  snapDuration="00:45"
+}}
+
+
+{{full-calendar
+  events=events
+  defaultView="agendaWeek"
+  allDaySlot=false
+}}
 
