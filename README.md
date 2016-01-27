@@ -45,12 +45,16 @@ Use the `full-calendar` component -
 * [defaultView](http://fullcalendar.io/docs/views/defaultView/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
-* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
 * [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
 
+### Timezone
+* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
+* [now](http://fullcalendar.io/docs/timezone/now/)
+
 ### Agenda Options
+
 * [allDaySlot](http://fullcalendar.io/docs/agenda/allDaySlot/)
 * [allDayText](http://fullcalendar.io/docs/agenda/allDayText/)
 * [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
