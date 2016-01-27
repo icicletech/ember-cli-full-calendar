@@ -27,10 +27,16 @@ export default Component.extend({
   defaultView: 'month',
 
   // Agenda Options
-  minTime: '00:00:00',
+  allDaySlot: true,
+  allDayText: 'all-day',
   maxTime: '24:00:00',
+  minTime: '00:00:00',
   scrollTime: '06:00:00',
+  slotDuration: '00:30:00',
   slotEventOverlap: true,
+  slotLabelFormat: 'h(:mm)a',
+  slotLabelInterval: '00:30:00',
+  snapDuration: '00:30:00',
 
   // Current Date
   defaultDate: null,
@@ -86,11 +92,16 @@ export default Component.extend({
       timezone: this.get('timezone'),
 
       // Agenda Option
-      minTime: this.get('minTime'),
+      allDaySlot: this.get('allDaySlot'),
+      allDayText: this.get('allDayText'),
       maxTime: this.get('maxTime'),
+      minTime: this.get('minTime'),
       scrollTime: this.get('scrollTime'),
+      slotDuration: this.get('slotDuration'),
       slotEventOverlap: this.get('slotEventOverlap'),
       slotLabelFormat: this.get('slotLabelFormat'),
+      slotLabelInterval: this.get('slotLabelInterval'),
+      snapDuration: this.get('snapDuration'),
 
       // Current Date
       defaultDate: this.get('defaultDate'),

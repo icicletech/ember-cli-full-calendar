@@ -16,10 +16,12 @@
     "node": ">= 0.10.0"
   },
   "author": "Icicle Technologies <tech@icicletech.com>",
-  "contributors": [{
-    "name": "Shrivara K S",
-    "email": "shrivara.ks@icicletech.com"
-  }],
+  "contributors": [
+    {
+      "name": "Shrivara K S",
+      "email": "shrivara.ks@icicletech.com"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
@@ -30,11 +32,13 @@
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-ic-ajax": "0.2.4",
     "ember-cli-inject-live-reload": "^1.3.1",
+    "ember-cli-moment-shim": "0.7.3",
     "ember-cli-qunit": "^1.0.4",
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "^1.0.0",
-    "ember-export-application-global": "^1.0.4",
     "ember-disable-prototype-extensions": "^1.0.0",
+    "ember-export-application-global": "^1.0.4",
+    "ember-moment": "6.0.0",
     "ember-try": "~0.0.8"
   },
   "keywords": [

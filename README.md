@@ -43,17 +43,23 @@ Use the `full-calendar` component -
 * [eventStartEditable](http://fullcalendar.io/docs/event_ui/eventStartEditable/)
 * [eventDurationEditable](http://fullcalendar.io/docs/event_ui/eventDurationEditable/)
 * [defaultView](http://fullcalendar.io/docs/views/defaultView/)
-* [minTime](http://fullcalendar.io/docs/agenda/minTime/)
-* [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
-* [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
-* [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
 * [businessHours](http://fullcalendar.io/docs/display/businessHours/)
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
 * [timezone](http://fullcalendar.io/docs/timezone/timezone/)
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
-* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
 * [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
+
+### Agenda Options
+* [allDaySlot](http://fullcalendar.io/docs/agenda/allDaySlot/)
+* [allDayText](http://fullcalendar.io/docs/agenda/allDayText/)
+* [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
+* [minTime](http://fullcalendar.io/docs/agenda/minTime/)
+* [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
+* [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
+* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
+* [slotLabelInterval](http://fullcalendar.io/docs/agenda/slotLabelInterval/)
+* [snapDuration](http://fullcalendar.io/docs/agenda/snapDuration/)
 
 ### Supported Callbacks
 
