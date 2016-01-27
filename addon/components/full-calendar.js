@@ -27,10 +27,16 @@ export default Component.extend({
   defaultView: 'month',
 
   // Agenda Options
-  minTime: '00:00:00',
+  allDaySlot: true,
+  allDayText: 'all-day',
   maxTime: '24:00:00',
+  minTime: '00:00:00',
   scrollTime: '06:00:00',
+  slotDuration: '00:30:00',
   slotEventOverlap: true,
+  slotLabelFormat: 'h(:mm)a',
+  slotLabelInterval: '00:30:00',
+  snapDuration: '00:30:00',
 
   // Current Date
   defaultDate: null,
@@ -78,7 +84,7 @@ export default Component.extend({
       businessHours: this.get('businessHours'),
       titleFormat: this.get('titleFormat'),
 
-      viewRender(view, element) => {
+      viewRender: (view, element) => {
         this.sendAction('viewRender', view, element);
       },
 
@@ -86,11 +92,16 @@ export default Component.extend({
       timezone: this.get('timezone'),
 
       // Agenda Option
-      minTime: this.get('minTime'),
+      allDaySlot: this.get('allDaySlot'),
+      allDayText: this.get('allDayText'),
       maxTime: this.get('maxTime'),
+      minTime: this.get('minTime'),
       scrollTime: this.get('scrollTime'),
+      slotDuration: this.get('slotDuration'),
       slotEventOverlap: this.get('slotEventOverlap'),
       slotLabelFormat: this.get('slotLabelFormat'),
+      slotLabelInterval: this.get('slotLabelInterval'),
+      snapDuration: this.get('snapDuration'),
 
       // Current Date
       defaultDate: this.get('defaultDate'),
@@ -99,56 +110,64 @@ export default Component.extend({
       lang: this.get('lang'),
 
       // Clicking & Hovering
-      dayClick(date, jsEvent, view) => {
+      dayClick: (date, jsEvent, view) => {
         this.sendAction('dayClick', date, jsEvent, view);
       },
 
-      eventClick(calEvent, jsEvent, view) => {
+      eventClick: (calEvent, jsEvent, view) => {
         this.sendAction('eventClick', calEvent, jsEvent, view);
       },
 
-      eventDragStart(event, jsEvent, ui, view) => {
+      eventDragStart: (event, jsEvent, ui, view) => {
         this.sendAction('eventDragStart', event, jsEvent, ui, view);
       },
 
-      eventDragStop(event, jsEvent, ui, view) => {
+      eventDragStop: (event, jsEvent, ui, view) => {
         this.sendAction('eventDragStop', event, jsEvent, ui, view);
       },
 
-      eventDrop(event, delta, revertFunc, jsEvent, ui, view) => {
+      eventDrop: (event, delta, revertFunc, jsEvent, ui, view) => {
         this.sendAction('eventDrop', event, delta, revertFunc, jsEvent, ui, view);
       },
 
-      eventResize(event, delta, revertFunc, jsEvent, ui, view) => {
+      eventResize: (event, delta, revertFunc, jsEvent, ui, view) => {
         this.sendAction('eventResize', event, delta, revertFunc, jsEvent, ui, view);
       },
 
-      eventResizeStart(event, jsEvent, ui, view) => {
+      eventResizeStart: (event, jsEvent, ui, view) => {
         this.sendAction('eventResizeStart', event, jsEvent, ui, view);
       },
 
-      eventResizeStop(event, jsEvent, ui, view) => {
+      eventResizeStop: (event, jsEvent, ui, view) => {
         this.sendAction('eventResizeStop', event, jsEvent, ui, view);
       },
 
-      select(start, end, jsEvent, view) => {
+      select: (start, end, jsEvent, view) => {
         this.sendAction('select', start, end, jsEvent, view);
       },
 
+      eventMouseover: (event, jsEvent, view) => {
+        this.sendAction('eventMouseover', event, jsEvent, view);
+      },
+
+      eventMouseout: (event, jsEvent, view) => {
+        this.sendAction('eventMouseout', event, jsEvent, view);
+      },
+
       // Event Rendering
-      eventRender(event, element, view) => {
+      eventRender: (event, element, view) => {
         this.sendAction('eventRender', event, element, view);
       },
 
-      eventAfterRender(event, element, view ) => {
+      eventAfterRender: (event, element, view ) => {
         this.sendAction('eventAfterRender', event, element, view);
       },
 
-      eventAfterAllRender(view) => {
+      eventAfterAllRender: (view) => {
         this.sendAction('eventAfterAllRender', view);
       },
 
-      eventDestroy(event, element, view) => {
+      eventDestroy: (event, element, view) => {
         this.sendAction('eventDestroy', event, element, view);
       },
 
