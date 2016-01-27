@@ -23,6 +23,9 @@ export default Component.extend({
   // Text/Time Customization
   lang: 'en',
 
+  // Timezone
+  timezone: false,
+
   // Views
   defaultView: 'month',
 
@@ -90,6 +93,7 @@ export default Component.extend({
 
       // Timezone
       timezone: this.get('timezone'),
+      now: this.get('now'),
 
       // Agenda Option
       allDaySlot: this.get('allDaySlot'),
