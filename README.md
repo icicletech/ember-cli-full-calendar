@@ -72,16 +72,32 @@ Use the `full-calendar` component -
 
 For the actions to work we need to register a property that will allow as to access FullCalendar element from our controller.
 
-`{{full-calendar  
-  events=events  
-  defaultView="agendaWeek"  
-  allDaySlot=false  
-  register-as="accessToFullCalendar"  
-  nowIndicator=true}}`
+
+```
+// app/templates/application.hbs
+{{full-calendar
+events=events
+defaultView="agendaWeek"
+allDaySlot=false
+register-as="accessToFullCalendar"
+nowIndicator=true}}
+```
 
 Sending actions from controller to FullCalendar:
 
-`this.get('accessToFullCalendar').send('actionName')`
+```
+// app/controllers/application.js
+export default Ember.Controller.extend({
+  
+  accessToFullCalendar: null,
+  
+  actions: {
+    prev: function() {
+      this.get('accessToFullCalendar').send('prev');
+    }
+  }
+});
+```
 
 ##### Available actions
 
