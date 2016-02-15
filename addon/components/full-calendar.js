@@ -57,7 +57,7 @@ export default Component.extend({
   // Selecting
   selectable: false,
 
-  updateEvents: observer('events', function() {
+  updateEvents: observer('events.[]', function() {
     var fullCalendarElement = this.$();
     fullCalendarElement.fullCalendar('removeEvents');
     fullCalendarElement.fullCalendar('addEventSource', this.get('events'));
