@@ -1,6 +1,7 @@
 <h2 id="title">Welcome to Ember.js</h2>
 
 {{outlet}}
+
 {{full-calendar
   events=events
   defaultView="agendaWeek"
@@ -16,10 +17,19 @@
   now="2013-12-01T00:00:00"
 }}
 
+  <button {{action 'prev'}}>Prev</button>
+  <button {{action 'next'}}>Next</button>
+  <button {{action 'prevYear'}}>Prev Year</button>
+  <button {{action 'nextYear'}}>Next Year</button>
+  <button {{action 'today'}}>Today</button>
+  <button {{action 'gotoDate'}}>Go To Date 2014-01-01</button>
+  <button {{action 'incrementDate'}}>Increment one month</button>
 
 {{full-calendar
   events=events
   defaultView="agendaWeek"
   allDaySlot=false
+  register-as="fullCalendar2"
+  nowIndicator=true
 }}
 

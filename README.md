@@ -47,7 +47,6 @@ Use the `full-calendar` component -
 * [titleFormat](http://fullcalendar.io/docs/text/titleFormat/)
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
-* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
 
 ### Timezone
 * [timezone](http://fullcalendar.io/docs/timezone/timezone/)
@@ -64,6 +63,63 @@ Use the `full-calendar` component -
 * [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
 * [slotLabelInterval](http://fullcalendar.io/docs/agenda/slotLabelInterval/)
 * [snapDuration](http://fullcalendar.io/docs/agenda/snapDuration/)
+
+### Current Date
+
+* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
+
+### Current Date Actions
+
+For the actions to work we need to register a property that will allow as to access FullCalendar element from our controller.
+
+
+```
+// app/templates/application.hbs
+{{full-calendar
+events=events
+defaultView="agendaWeek"
+allDaySlot=false
+register-as="accessToFullCalendar"
+nowIndicator=true}}
+```
+
+Sending actions from controller to FullCalendar:
+
+```
+// app/controllers/application.js
+export default Ember.Controller.extend({
+  
+  accessToFullCalendar: null,
+  
+  actions: {
+    prev: function() {
+      this.get('accessToFullCalendar').send('prev');
+    }
+  }
+});
+```
+
+##### Available actions
+
+* [prev](http://fullcalendar.io/docs/current_date/prev/)  
+  `this.get('accessToFullCalendar').send('prev')`
+
+* [next](http://fullcalendar.io/docs/current_date/next/)  
+  `this.get('accessToFullCalendar').send('next')`
+
+* [prevYear](http://fullcalendar.io/docs/current_date/prevYear/)  
+  `this.get('accessToFullCalendar').send('prevYear')`
+
+* [nextYear](http://fullcalendar.io/docs/current_date/nextYear/)  
+  `this.get('accessToFullCalendar').send('nextYear')`
+
+* [gotoDate](http://fullcalendar.io/docs/current_date/gotoDate/)  
+  `this.get('accessToFullCalendar').send('gotoDate', new Date(2014, 1, 1))`
+
+* [incrementDate](http://fullcalendar.io/docs/current_date/incrementDate/)  
+  `this.get('accessToFullCalendar').send('incrementDate', {months:1})`
+
+Please check dummy app in tests for usage example.
 
 ### Supported Callbacks
 
