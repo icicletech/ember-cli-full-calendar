@@ -86,6 +86,7 @@ export default Component.extend({
       defaultView: this.get('defaultView'),
       businessHours: this.get('businessHours'),
       titleFormat: this.get('titleFormat'),
+      columnFormat: this.get('columnFormat'),
 
       viewRender: (view, element) => {
         this.sendAction('viewRender', view, element);
