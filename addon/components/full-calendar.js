@@ -43,6 +43,7 @@ export default Component.extend({
 
   // Current Date
   defaultDate: null,
+  nowIndicator: false,
 
   // Event Dragging & Resizing
   editable: false,
@@ -56,12 +57,19 @@ export default Component.extend({
   // Selecting
   selectable: false,
 
-  updateEvents: observer('events', function() {
+  updateEvents: observer('events.[]', function() {
     var fullCalendarElement = this.$();
     fullCalendarElement.fullCalendar('removeEvents');
     fullCalendarElement.fullCalendar('addEventSource', this.get('events'));
     fullCalendarElement.fullCalendar('rerenderEvents' );
   }),
+
+  /**
+   * Register this component to parent controller. We need this to be able to send actions from outside.
+   */
+  didReceiveAttrs: function() {
+    this.set('targetObject.' + this.get('register-as'), this);
+  },
 
   didInsertElement() {
     this._super(...arguments);
@@ -186,5 +194,38 @@ export default Component.extend({
       // Selecting
       selectable: this.get('selectable')
     });
+  },
+
+  // Actions sent from outsite to full calendar
+  actions: {
+
+    // Curent date
+    prev: function() {
+      this.$().fullCalendar('prev');
+    },
+
+    next: function() {
+      this.$().fullCalendar('next');
+    },
+
+    prevYear: function() {
+      this.$().fullCalendar('prevYear');
+    },
+
+    nextYear: function() {
+      this.$().fullCalendar('nextYear');
+    },
+
+    today: function() {
+      this.$().fullCalendar('today');
+    },
+
+    gotoDate: function(date) {
+      this.$().fullCalendar('gotoDate', date);
+    },
+
+    incrementDate: function(duration) {
+      this.$().fullCalendar('incrementDate', duration);
+    }
   }
 });
