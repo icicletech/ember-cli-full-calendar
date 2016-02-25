@@ -48,29 +48,9 @@ Use the `full-calendar` component -
 * [lang](http://fullcalendar.io/docs/text/lang/)
 * [timeFormat](http://fullcalendar.io/docs/text/timeFormat/)
 
-### Timezone
-* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
-* [now](http://fullcalendar.io/docs/timezone/now/)
+### Sending Actions to calendar
 
-### Agenda Options
-
-* [allDaySlot](http://fullcalendar.io/docs/agenda/allDaySlot/)
-* [allDayText](http://fullcalendar.io/docs/agenda/allDayText/)
-* [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
-* [minTime](http://fullcalendar.io/docs/agenda/minTime/)
-* [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
-* [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
-* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
-* [slotLabelInterval](http://fullcalendar.io/docs/agenda/slotLabelInterval/)
-* [snapDuration](http://fullcalendar.io/docs/agenda/snapDuration/)
-
-### Current Date
-
-* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
-
-### Current Date Actions
-
-For the actions to work we need to register a property that will allow as to access FullCalendar element from our controller.
+For the actions to work we need to register a property that will allow us to access FullCalendar element from our controller.
 
 
 ```
@@ -99,7 +79,27 @@ export default Ember.Controller.extend({
 });
 ```
 
-##### Available actions
+### Timezone
+* [timezone](http://fullcalendar.io/docs/timezone/timezone/)
+* [now](http://fullcalendar.io/docs/timezone/now/)
+
+### Agenda Options
+
+* [allDaySlot](http://fullcalendar.io/docs/agenda/allDaySlot/)
+* [allDayText](http://fullcalendar.io/docs/agenda/allDayText/)
+* [maxTime](http://fullcalendar.io/docs/agenda/maxTime/)
+* [minTime](http://fullcalendar.io/docs/agenda/minTime/)
+* [scrollTime](http://fullcalendar.io/docs/agenda/scrollTime/)
+* [slotEventOverlap](http://fullcalendar.io/docs/agenda/slotEventOverlap/)
+* [slotLabelFormat](http://fullcalendar.io/docs/timeline/slotLabelFormat/)
+* [slotLabelInterval](http://fullcalendar.io/docs/agenda/slotLabelInterval/)
+* [snapDuration](http://fullcalendar.io/docs/agenda/snapDuration/)
+
+### Current Date
+
+* [defaultDate](http://fullcalendar.io/docs/current_date/defaultDate/)
+
+### Current Date Actions
 
 * [prev](http://fullcalendar.io/docs/current_date/prev/)  
   `this.get('accessToFullCalendar').send('prev')`
@@ -121,6 +121,27 @@ export default Ember.Controller.extend({
 
 Please check dummy app in tests for usage example.
 
+### Event Rendering
+
+* [eventColor](http://fullcalendar.io/docs/event_rendering/Colors/)
+* [eventBackgroundColor](http://fullcalendar.io/docs/event_rendering/eventBackgroundColor/)
+* [eventBorderColor](http://fullcalendar.io/docs/event_rendering/eventBorderColor/)
+* [eventTextColor](http://fullcalendar.io/docs/event_rendering/eventTextColor/)
+* [nextDayThreshold](http://fullcalendar.io/docs/event_rendering/nextDayThreshold/)
+* [eventOrder](http://fullcalendar.io/docs/event_rendering/eventOrder/)
+* [eventRender (callback)](http://fullcalendar.io/docs/event_rendering/eventRender/)
+* [eventAfterRender (callback)](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
+* [eventAfterAllRender (callback)](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
+* [eventDestroy (callback)](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
+
+### Event Rendering Actions
+
+* [renderEvent (method)](http://fullcalendar.io/docs/event_rendering/renderEvent/)  
+  `this.get('accessToFullCalendar').send('renderEvent', {title: "New Event", start: new Date(2014, 1, 1)})`
+
+* [rerenderEvents (method)](http://fullcalendar.io/docs/event_rendering/rerenderEvents/)  
+  `this.get('accessToFullCalendar').send('rerenderEvents')`
+
 ### Supported Callbacks
 
 * [eventClick](http://fullcalendar.io/docs/mouse/eventClick/)
@@ -130,10 +151,6 @@ Please check dummy app in tests for usage example.
 * [eventResize](http://fullcalendar.io/docs/event_ui/eventResize/)
 * [eventResizeStart](http://fullcalendar.io/docs/event_ui/eventResizeStart/)
 * [eventResizeStop](http://fullcalendar.io/docs/event_ui/eventResizeStop/)
-* [eventRender](http://fullcalendar.io/docs/event_rendering/eventRender/)
-* [eventAfterRender](http://fullcalendar.io/docs/event_rendering/eventAfterRender/)
-* [eventAfterAllRender](http://fullcalendar.io/docs/event_rendering/eventAfterAllRender/)
-* [eventDestroy](http://fullcalendar.io/docs/event_rendering/eventDestroy/)
 * [eventMouseover](http://fullcalendar.io/docs/mouse/eventMouseover/)
 * [eventMouseout](http://fullcalendar.io/docs/mouse/eventMouseout/)
 * [select](http://fullcalendar.io/docs/selection/select_callback/)
