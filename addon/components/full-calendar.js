@@ -45,6 +45,14 @@ export default Component.extend({
   defaultDate: null,
   nowIndicator: false,
 
+  // Event Rendering
+  eventColor: null,
+  eventBackgroundColor: null,
+  eventBorderColor: null,
+  eventTextColor: null,
+  nextDayThreshold: "09:00:00",
+  eventOrder: "title",
+
   // Event Dragging & Resizing
   editable: false,
   eventStartEditable: false,
@@ -118,6 +126,14 @@ export default Component.extend({
 
       // Current Date
       defaultDate: this.get('defaultDate'),
+
+      // Event Rendering
+      eventColor: this.get('eventColor'),
+      eventBackgroundColor: this.get('eventBackgroundColor'),
+      eventBorderColor: this.get('eventBorderColor'),
+      eventTextColor: this.get('eventTextColor'),
+      nextDayThreshold: this.get('nextDayThreshold'),
+      eventOrder: this.get('eventOrder'),
 
       // Text/Time Customization
       lang: this.get('lang'),
@@ -227,6 +243,16 @@ export default Component.extend({
 
     incrementDate: function(duration) {
       this.$().fullCalendar('incrementDate', duration);
-    }
+    },
+
+    // Event Rendering
+    renderEvent: function(event, stick) {
+      this.$().fullCalendar('renderEvent', event, stick);
+    },
+
+    rerenderEvents: function() {
+      this.$().fullCalendar('rerenderEvents');
+    },
+
   }
 });
