@@ -22,6 +22,13 @@ export default Component.extend({
 
   // Text/Time Customization
   lang: 'en',
+  displayEventEnd: {
+    month: false,
+    basicView: false,
+    agendaWeek: true,
+    agendaDay: true,
+    basicDay: true
+  },
 
   // Timezone
   timezone: false,
@@ -137,6 +144,7 @@ export default Component.extend({
 
       // Text/Time Customization
       lang: this.get('lang'),
+      displayEventEnd: this.get('displayEventEnd'),
 
       // Clicking & Hovering
       dayClick: (date, jsEvent, view) => {
