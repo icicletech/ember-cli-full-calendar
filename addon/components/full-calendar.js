@@ -28,7 +28,7 @@ export default Component.extend({
     agendaWeek: true,
     agendaDay: true,
     basicDay: true
-  }
+  },
 
   // Timezone
   timezone: false,
