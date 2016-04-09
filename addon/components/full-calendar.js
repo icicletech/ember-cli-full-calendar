@@ -262,5 +262,8 @@ export default Component.extend({
       this.$().fullCalendar('rerenderEvents');
     },
 
+    refetchEvents: function() {
+      this.$().fullCalendar('refetchEvents');
+    },
   }
 });
