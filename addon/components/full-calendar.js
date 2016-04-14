@@ -18,6 +18,7 @@ export default Component.extend({
   fixedWeekCount: true,
   weekNumbers: false,
   height: 'auto',
+  eventLimit: false,
   businessHours: false,
 
   // Text/Time Customization
@@ -106,6 +107,7 @@ export default Component.extend({
       fixedWeekCount: this.get('fixedWeekCount'),
       weekNumbers: this.get('weekNumbers'),
       height: this.get('height'),
+      eventLimit: this.get('eventLimit'),
       defaultView: this.get('defaultView'),
       businessHours: this.get('businessHours'),
       titleFormat: this.get('titleFormat'),
