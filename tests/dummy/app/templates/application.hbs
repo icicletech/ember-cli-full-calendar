@@ -1,47 +1,10 @@
-<h2 id="title">Welcome to Ember.js</h2>
-
-{{outlet}}
-
-  <button {{action 'renderEvent'}}>Add event action</button>
-  <button {{action 'rerenderEvents'}}>Rerender events</button>
-
-{{full-calendar
-  events=events
-  defaultView="agendaWeek"
-  allDayText="Whole day"
-  scrollTime="00:30"
-  slotDuration="00:15"
-  slotEventOverlap=false
-  slotLabelFormat="HH:mm"
-  slotLabelInterval="00:15"
-  snapDuration="00:45"
-  header=fcHeader
-  nextDayThreshold="03:00:00"
-  eventOrder="-title"
-  register-as="fullCalendar1"
-}}
-
-  <hr>
-
-  <button {{action 'prev'}}>Prev</button>
-  <button {{action 'next'}}>Next</button>
-  <button {{action 'prevYear'}}>Prev Year</button>
-  <button {{action 'nextYear'}}>Next Year</button>
-  <button {{action 'today'}}>Today</button>
-  <button {{action 'gotoDate'}}>Go To Date 2014-01-01</button>
-  <button {{action 'incrementDate'}}>Increment one month</button>
-
-{{full-calendar
-  events=events
-  defaultView="agendaWeek"
-  allDaySlot=false
-  register-as="fullCalendar2"
-  nowIndicator=true
-  eventColor='yellow'
-  eventBackgroundColor='green'
-  eventTextColor='blue'
-  minTime="08:00"
-  maxTime="20:00"
-  header=fcHeader
-}}
-
+<div class="max-width-1170">
+    <button {{action 'prev'}}>Prev</button>
+    {{full-calendar
+    events=events
+    allDaySlot=false
+    eventLimit=3
+    eventRender=eventRender
+    register-as='accessToFullCalendar'
+    nowIndicator=true}}
+</div>
