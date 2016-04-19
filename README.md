@@ -21,7 +21,7 @@ ember g full-calendar
 }}
 ```
 
-### Sending actions
+### Actions
 
 To send actions to the calendar, register it with the controller.
 
