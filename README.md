@@ -46,7 +46,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-### Setting Up callbacks
+### Callbacks
 
 ```handlebars
 // app/templates/application.hbs
