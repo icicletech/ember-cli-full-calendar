@@ -21,7 +21,7 @@ ember g full-calendar
 }}
 ```
 
-### Sending Actions to Calendar
+### Sending actions
 
 To send actions to the calendar, register it with the controller.
 
@@ -33,8 +33,6 @@ To send actions to the calendar, register it with the controller.
   register-as="accessToFullCalendar"
 }}
 ```
-
-Sending actions from controller to full calendar:
 
 ```javascript
 // app/controllers/application.js
@@ -48,9 +46,7 @@ export default Ember.Controller.extend({
 });
 ```
 
-Please check dummy app for other usage example.
-
-### Setting Up Callbacks
+### Setting Up callbacks
 
 ```handlebars
 // app/templates/application.hbs
@@ -76,8 +72,6 @@ export default Ember.Route.extend({
 });
 ```
 
-Register for the action in your controller.
-
 ```javascript
 // app/controllers/application.js
 import Ember from 'ember';
@@ -93,8 +87,6 @@ export default Ember.Controller.extend({
 ```
 
 ### I18n
-
-Include the language file.
 
 ```javascript
 // ember-cli-build.js
@@ -116,8 +108,8 @@ module.exports = function(defaults) {
 }}
 ```
 
-### Credits
-[![Icicle Technologies](https://cdn2.icicletech.com/assets/icicle-698e4eaeca5518499068468bc3ba5680.png)](https://www.icicletech.com)
-
 ### License
 Available under the MIT License.
+
+### Credits
+[![Icicle Technologies](https://cdn2.icicletech.com/assets/icicle-698e4eaeca5518499068468bc3ba5680.png)](https://www.icicletech.com)
