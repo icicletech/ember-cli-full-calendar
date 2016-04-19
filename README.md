@@ -5,14 +5,14 @@
 
 Ember wrapper for [jQuery FullCalendar](http://fullcalendar.io/) plugin.
 
-## Installation
+### Installation
 
 ```
 npm install --save-dev ember-cli-full-calendar
 ember g full-calendar
 ```
 
-## Usage
+### Usage
 
 ```handlebars
 {{
@@ -34,7 +34,7 @@ To send actions to the calendar, register it with the controller.
 }}
 ```
 
-Sending actions from controller to FullCalendar:
+Sending actions from controller to full calendar:
 
 ```javascript
 // app/controllers/application.js
@@ -66,13 +66,13 @@ Please check dummy app for other usage example.
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model: function() {
-		return {
-			events: Ember.A([{
-				title: "Hackathon", start: Date.now()
-			}])
-		};
-	}
+  model: function() {
+    return {
+      events: Ember.A([{
+        title: "Hackathon", start: Date.now()
+      }])
+    };
+  }
 });
 ```
 
@@ -83,12 +83,12 @@ Register for the action in your controller.
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	actions: {
-		clicked(event, jsEvent, view){
-			console.log(`${event.title} was clicked!`)
-			// Prints: Hackathon was clicked!
-		}
-	}
+  actions: {
+    clicked(event, jsEvent, view){
+      console.log(`${event.title} was clicked!`)
+      // Prints: Hackathon was clicked!
+    }
+  }
 });
 ```
 
