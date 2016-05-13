@@ -68,7 +68,7 @@ export default Ember.Controller.extend({
   eventAfterRender=(action "eventAfterRender") 
   eventAfterAllRender=(action "eventAfterAllRender") 
   eventDestroy=(action "eventDestroy") 
-  dayRender=(action "eventDestroy") 
+  dayRender=(action "dayRender") 
 }}
 ```
 
@@ -93,10 +93,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    clicked(event, jsEvent, view){
+    eventClick(event, jsEvent, view){
       console.log(`${event.title} was clicked!`)
       // Prints: Hackathon was clicked!
-    }
+    },
+    //other callbacks omitted
   }
 });
 ```
