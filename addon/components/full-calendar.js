@@ -210,6 +210,11 @@ export default Component.extend({
         this.sendAction('eventDestroy', event, element, view);
       },
 
+      // Day Rendering
+      dayRender: (date, element, view) => {
+        this.sendAction('dayRender', date, element);
+      },
+
       // Dragging & Resizing
       editable: this.get('editable'),
       eventStartEditable: this.get('eventStartEditable'),
