@@ -136,6 +136,9 @@ export default Component.extend({
       // Current Date
       defaultDate: this.get('defaultDate'),
 
+      // nowIndicator
+      nowIndicator: this.get('nowIndicator'),
+
       // Event Rendering
       eventColor: this.get('eventColor'),
       eventBackgroundColor: this.get('eventBackgroundColor'),
