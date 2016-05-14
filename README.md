@@ -53,7 +53,22 @@ export default Ember.Controller.extend({
 {{
   full-calendar 
   events=events 
-  eventClick=(action "clicked") 
+  eventClick=(action "eventClick") 
+  dayClick=(action "dayClick") 
+  eventDragStart=(action "eventDragStart") 
+  eventDragStop=(action "eventDragStop") 
+  eventDrop=(action "eventDrop") 
+  eventResize=(action "eventResize") 
+  eventResizeStart=(action "eventResizeStart") 
+  eventResizeStop=(action "eventResizeStop") 
+  select=(action "select") 
+  eventMouseover=(action "eventMouseover") 
+  eventMouseout=(action "eventMouseout") 
+  eventRender=(action "eventRender") 
+  eventAfterRender=(action "eventAfterRender") 
+  eventAfterAllRender=(action "eventAfterAllRender") 
+  eventDestroy=(action "eventDestroy") 
+  dayRender=(action "dayRender") 
 }}
 ```
 
@@ -78,10 +93,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    clicked(event, jsEvent, view){
+    eventClick(event, jsEvent, view){
       console.log(`${event.title} was clicked!`)
       // Prints: Hackathon was clicked!
-    }
+    },
+    //other callbacks omitted
   }
 });
 ```
