@@ -275,5 +275,10 @@ export default Component.extend({
     refetchEvents: function() {
       this.$().fullCalendar('refetchEvents');
     },
+
+    //Rerendering view
+    changeView: function(viewName) {
+      this.$().fullCalendar('changeView', viewName);
+    }
   }
 });
