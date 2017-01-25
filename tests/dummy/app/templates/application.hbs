@@ -2,20 +2,26 @@
 
 {{outlet}}
 
+  <button {{action 'renderEvent'}}>Add event action</button>
+  <button {{action 'rerenderEvents'}}>Rerender events</button>
+
 {{full-calendar
   events=events
   defaultView="agendaWeek"
   allDayText="Whole day"
-  minTime="08:00"
-  maxTime="20:00"
   scrollTime="00:30"
   slotDuration="00:15"
   slotEventOverlap=false
   slotLabelFormat="HH:mm"
   slotLabelInterval="00:15"
   snapDuration="00:45"
-  now="2013-12-01T00:00:00"
+  header=fcHeader
+  nextDayThreshold="03:00:00"
+  eventOrder="-title"
+  register-as="fullCalendar1"
 }}
+
+  <hr>
 
   <button {{action 'prev'}}>Prev</button>
   <button {{action 'next'}}>Next</button>
@@ -31,5 +37,11 @@
   allDaySlot=false
   register-as="fullCalendar2"
   nowIndicator=true
+  eventColor='yellow'
+  eventBackgroundColor='green'
+  eventTextColor='blue'
+  minTime="08:00"
+  maxTime="20:00"
+  header=fcHeader
 }}
 

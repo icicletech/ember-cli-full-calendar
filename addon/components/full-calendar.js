@@ -18,10 +18,18 @@ export default Component.extend({
   fixedWeekCount: true,
   weekNumbers: false,
   height: 'auto',
+  eventLimit: false,
   businessHours: false,
 
   // Text/Time Customization
   lang: 'en',
+  displayEventEnd: {
+    month: false,
+    basicView: false,
+    agendaWeek: true,
+    agendaDay: true,
+    basicDay: true
+  },
 
   // Timezone
   timezone: false,
@@ -44,6 +52,14 @@ export default Component.extend({
   // Current Date
   defaultDate: null,
   nowIndicator: false,
+
+  // Event Rendering
+  eventColor: null,
+  eventBackgroundColor: null,
+  eventBorderColor: null,
+  eventTextColor: null,
+  nextDayThreshold: "09:00:00",
+  eventOrder: "title",
 
   // Event Dragging & Resizing
   editable: false,
@@ -91,6 +107,7 @@ export default Component.extend({
       fixedWeekCount: this.get('fixedWeekCount'),
       weekNumbers: this.get('weekNumbers'),
       height: this.get('height'),
+      eventLimit: this.get('eventLimit'),
       defaultView: this.get('defaultView'),
       businessHours: this.get('businessHours'),
       titleFormat: this.get('titleFormat'),
@@ -119,8 +136,20 @@ export default Component.extend({
       // Current Date
       defaultDate: this.get('defaultDate'),
 
+      // nowIndicator
+      nowIndicator: this.get('nowIndicator'),
+
+      // Event Rendering
+      eventColor: this.get('eventColor'),
+      eventBackgroundColor: this.get('eventBackgroundColor'),
+      eventBorderColor: this.get('eventBorderColor'),
+      eventTextColor: this.get('eventTextColor'),
+      nextDayThreshold: this.get('nextDayThreshold'),
+      eventOrder: this.get('eventOrder'),
+
       // Text/Time Customization
       lang: this.get('lang'),
+      displayEventEnd: this.get('displayEventEnd'),
 
       // Clicking & Hovering
       dayClick: (date, jsEvent, view) => {
@@ -184,6 +213,11 @@ export default Component.extend({
         this.sendAction('eventDestroy', event, element, view);
       },
 
+      // Day Rendering
+      dayRender: (date, element, view) => {
+        this.sendAction('dayRender', date, element);
+      },
+
       // Dragging & Resizing
       editable: this.get('editable'),
       eventStartEditable: this.get('eventStartEditable'),
@@ -227,6 +261,19 @@ export default Component.extend({
 
     incrementDate: function(duration) {
       this.$().fullCalendar('incrementDate', duration);
-    }
+    },
+
+    // Event Rendering
+    renderEvent: function(event, stick) {
+      this.$().fullCalendar('renderEvent', event, stick);
+    },
+
+    rerenderEvents: function() {
+      this.$().fullCalendar('rerenderEvents');
+    },
+
+    refetchEvents: function() {
+      this.$().fullCalendar('refetchEvents');
+    },
   }
 });
