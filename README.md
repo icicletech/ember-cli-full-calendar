@@ -21,30 +21,45 @@ ember g full-calendar
 }}
 ```
 
-### Actions
+### Dynamic updates
 
-To send actions to the calendar, register it with the controller.
+To dynamically change calendars option please use the updateOptions attribute.
+This attribute is an array of options that needs to be changed.
+
+```javascript
+[
+  {optionName: 'someOption', value: 'someValue'},
+  {optionName: 'someAnotherOption', value: 'someAnotherValue'}
+]
+```
+
+When the attribute will change from null to something it will run a function inside the component to update Full Calendar and then set back the updateOptions to null.
+
+For example:
 
 ```handlebars
 // app/templates/application.hbs
 {{
   full-calendar
   events=events
-  register-as="accessToFullCalendar"
+  updateOptions=optionsToUpdate
 }}
 ```
 
 ```javascript
 // app/controllers/application.js
-export default Ember.Controller.extend({
-  accessToFullCalendar: null,
-  actions: {
-    prev: function() {
-      this.get('accessToFullCalendar').send('prev');
-    }
-  }
-});
+this.set('optionsToUpdate', [{optionName: "height", value: 800}]);
 ```
+
+After setting optionsToUpdate as above it will send to Full Calendar:
+
+```javascript
+component.$().fullCalendar('option', 'height', 800);
+```
+
+Any option allowed for Full Calendar dynamic change can be set this way.
+
+The previous way was to use register-as attribute to be able to access the component in the controller, but this has been deprecated as it will not work in the newer versions of ember.js.
 
 ### Callbacks
 
