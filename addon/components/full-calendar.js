@@ -84,7 +84,8 @@ export default Component.extend({
    * Register this component to parent controller. We need this to be able to send actions from outside.
    */
   didReceiveAttrs: function() {
-    this.set('targetObject.' + this.get('register-as'), this);
+    let targetObject = this.get('targetObject') ? 'targetObject' : '_targetObject';
+    this.set(targetObject + '.' + this.get('register-as'), this);
   },
 
   didInsertElement() {
