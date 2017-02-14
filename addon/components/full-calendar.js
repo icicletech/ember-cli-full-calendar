@@ -73,6 +73,39 @@ export default Component.extend({
   // Selecting
   selectable: false,
 
+  // Update options array is used to change Full Calendar parameters after it was rendered.
+  // It consist of objects with optionName and value properties.
+  //
+  // This object is being observed and after a change FullCalendar function is run on existing Full Calendar.
+  //
+  // For Example:
+  // this.set('updateOptions', [{optionName: "height", value: 700}]);
+  //
+  // Will run function:
+  // fullCalendar('optionName', 'height', 700);
+  //
+  // After options has been updated the updateOptions attribute is set as null again.
+  updateOptions: null,
+
+  //
+  // Observes and processes updateOptions.
+  updateOptionsObserver: Ember.observer('updateOptions', function() {
+
+    let updateOptions = this.get('updateOptions');
+    const component = this;
+
+    if (updateOptions === null || updateOptions.get('length') === 0) {
+      return;
+    }
+
+    updateOptions.forEach(function(option) {
+      component.$().fullCalendar('option', option.optionName, option.value);
+    });
+
+    this.set('updateOptions', null);
+
+  }),
+
   updateEvents: observer('events.[]', function() {
     var fullCalendarElement = this.$();
     fullCalendarElement.fullCalendar('removeEvents');
@@ -82,9 +115,20 @@ export default Component.extend({
 
   /**
    * Register this component to parent controller. We need this to be able to send actions from outside.
+   *
    */
   didReceiveAttrs: function() {
-    this.set('targetObject.' + this.get('register-as'), this);
+
+    let register = this.get('register-as');
+    if (register !== null && typeof register !== "undefined" && parseInt(Ember.VERSION.split('.')[0]) >= 2) {
+      Ember.Logger.warn('DEPRECATION from ember-cli-full-calendar addon.' +
+      'register-as has been depracated and will not work with ember.js 2.8 or newer.' +
+      'Please use updateOptions instead.');
+    }
+
+    if (typeof this.get('targetObject') !== 'undefined' && this.get('targetObject') !== null) {
+      this.set('targetObject.' + this.get('register-as'), this);
+    }
   },
 
   didInsertElement() {
@@ -215,7 +259,7 @@ export default Component.extend({
 
       // Day Rendering
       dayRender: (date, element, view) => {
-        this.sendAction('dayRender', date, element);
+        this.sendAction('dayRender', date, element, view);
       },
 
       // Dragging & Resizing
