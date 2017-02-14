@@ -119,7 +119,8 @@ export default Component.extend({
    */
   didReceiveAttrs: function() {
 
-    if (this.get('register-as') !== null && parseInt(Ember.VERSION.split('.')[0]) >= 2) {
+    let register = this.get('register-as');
+    if (register !== null && typeof register !== "undefined" && parseInt(Ember.VERSION.split('.')[0]) >= 2) {
       Ember.Logger.warn('DEPRECATION from ember-cli-full-calendar addon.' +
       'register-as has been depracated and will not work with ember.js 2.8 or newer.' +
       'Please use updateOptions instead.');
