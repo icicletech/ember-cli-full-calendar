@@ -89,7 +89,7 @@ export default Component.extend({
 
   didInsertElement() {
     this._super(...arguments);
-    this.$().fullCalendar({
+    this.element.addEventListener({
 
       // Event Data
       events: this.get('events'),
@@ -236,44 +236,44 @@ export default Component.extend({
 
     // Curent date
     prev: function() {
-      this.$().fullCalendar('prev');
+      this.element.addEventListener('prev');
     },
 
     next: function() {
-      this.$().fullCalendar('next');
+      this.element.addEventListener('next');
     },
 
     prevYear: function() {
-      this.$().fullCalendar('prevYear');
+      this.element.addEventListener('prevYear');
     },
 
     nextYear: function() {
-      this.$().fullCalendar('nextYear');
+      this.element.addEventListener('nextYear');
     },
 
     today: function() {
-      this.$().fullCalendar('today');
+      this.element.addEventListener('today');
     },
 
     gotoDate: function(date) {
-      this.$().fullCalendar('gotoDate', date);
+      this.element.addEventListener('gotoDate', date);
     },
 
     incrementDate: function(duration) {
-      this.$().fullCalendar('incrementDate', duration);
+      this.element.addEventListener('incrementDate', duration);
     },
 
     // Event Rendering
     renderEvent: function(event, stick) {
-      this.$().fullCalendar('renderEvent', event, stick);
+      this.element.addEventListener('renderEvent', event, stick);
     },
 
     rerenderEvents: function() {
-      this.$().fullCalendar('rerenderEvents');
+      this.element.addEventListener('rerenderEvents');
     },
 
     refetchEvents: function() {
-      this.$().fullCalendar('refetchEvents');
+      this.element.addEventListener('refetchEvents');
     },
   }
 });
